@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+SOME_DIR = os.path.join(BASE_DIR, 'my_dir')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -82,9 +82,11 @@ WSGI_APPLICATION = 'RealEstate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "RealEstatedb",
+        'NAME': "realestatedb",
+        # "USER": "postgres",
+        # "PASSWORD": "1234",
         "USER": "postgres",
-        "PASSWORD": "123456",
+        "PASSWORD": "admin",
         "HOST": "localhost",
     }
 }

@@ -8,7 +8,7 @@ from .models import Listing
 def index(request):
 	# listings = Listing.objects.all()#db bata date linx
 	listings = Listing.objects.order_by("-list_date").filter(is_published=True) #date jasto agadi tei paila aaux and filter ko ma chai is_published db ma tick vae matra display natra no display
-	paginator = Paginator(listings, 8)
+	paginator = Paginator(listings, 3)
 	page= request.GET.get("page")
 	paged_listings=paginator.get_page(page)
 	context = {
